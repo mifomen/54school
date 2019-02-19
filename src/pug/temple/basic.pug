@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<meta charset="utf-8">
+//##init##
+//- <base href="http://54school.ru/">
+<link href="css/normalize.css" rel="stylesheet">
+<link href="css/main-style.css" rel="stylesheet">
+<link href="css/head.css" rel="stylesheet">
+<link href="scss/style.min.css" rel="stylesheet">
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<div class="above">
+<div class="low-eyes-panel" style="font-size: 16px; line-height: 1; letter-spacing: normal; font-family: 'Times New Roman', sans-serif;">
+<div class="flex-colum vertical-img">
+<a href="#" class="reset"></a>
+</div>
+<div class="font-size-tools flex-colum">
+<div>Размер шрифта</div>
+<div class="SecondLevel">
+<button type=button class="LowFontSize SecondLevel__img" title="Мелкий шрифт"></button>
+<button type=button class="MiddleFontSize  SecondLevel__img" title="Средний шрифт"></button>
+<button type=button class="LargeFontSize  SecondLevel__img" title="Крупный шрифт"></button>
+</div>
+</div>
+<div class="font-family-tools flex-colum">
+<div>Шрифт</div>
+<div class="SecondLevel">
+<button type=button class="Arial-bg Arial SecondLevel__img" title="Arial"></button>
+<button type=button class="TimesNewRoman-bg TimesNewRoman SecondLevel__img" title="Times New Roman"></button>
+</div>
+</div>
+<div class="letter-spacing-tools flex-colum">
+<div>Межсимвольный интервал</div>
+<div class="SecondLevel">
+<button type=button class="letter-spacing-default SecondLevel__img" title="Стандартный"></button>
+<button type=button class="letter-spacing-middle SecondLevel__img" title="Средний"></button>
+<button type=button class="letter-spacing-large SecondLevel__img" title="Большой"></button>
+</div>
+</div>
+<div class="line-height-tools flex-colum">
+<div>Межстрочный интервал</div>
+<div class="SecondLevel">
+<button type=button class="line-height-default SecondLevel__img" title="Уменьшенный"></button>
+<button type=button class="line-height-middle SecondLevel__img" title="Стандартный"></button>
+<button type=button class="line-height-large SecondLevel__img" title="Увеличенный"></button>
+</div>
+</div>
+<div class="color-scheme flex-colum">
+<div>Цветовая схема</div>
+<div class="SecondLevel">
+<button type=button class="BlackAndWhite-bg BlackAndWhite SecondLevel__img" title="Черным по белому"></button>
+<button type=button class="WhiteAndBlack-bg SecondLevel__img" title="Белым по черному"></button>
+<button type=button class="DarkBlue-bg DarkBlue SecondLevel__img" title="Темно-синим по голубому"></button>
+</div>
+</div>
+<div class="color-scheme flex-colum">
+<div>Изображения</div>
+<div class="SecondLevel">
+<button type=button class="FullColorImages  SecondLevel__img" title="Цветные изображения"></button>
+<button type=button class="GreyScaleImages  SecondLevel__img" title="Черно-белые изображения"></button>
+<button type=button class="DisableImages  SecondLevel__img" title="Спрятать изображения"></button>
+</div>
+</div>
+</div>
+
+<div class="panel-before"></div>
+<div class="panel"><a class="active-low-eyes" href="http://54school.ru">Версия для слабовидящих</a>
+
+</div>
+<div class="panel-after"></div>
+
+</div>
+
+<div class="main-body">
+<div id=stat>
+    //- <!--##stat_agent##-->
+    </div>
+    
+    <table class="" cellspacing=0 cellpadding=0 style="min-width:1280px;" width="100%" border=0>
+    <tbody>
+    <tr> 
+    <td colspan=2 id=lay_f1 class="lay_f1" width=100% valign=top>
+    
+        //- ##lay_f1_body##
+        include header.html
+        </td>
+        </tr>
+
+
+        <tr>
+
+        <td id=lay_f2 class="lay_f2"  height=auto align=left valign=top >
+        //- ##lay_f2_body##
+        include left-block.html
+       
+
+        </td>
+
+        
+        <td id=lay_body  class="lay_body">
+          include html/body.html
+        </td>
+
+        </tr>
+
+
+        <tr> 
+        <td colspan=2 id=lay_f4 class="lay_f4">
+            //- ##lay_f4_body##
+            include right-block.html
+            </td>
+
+            </tr>
+
+            <tr> 
+            <td colspan=2 id=lay_f3 class="lay_f3" >
+        //- ##lay_f3_body##
+        include footer.html
+
+
+        </td>
+        
+        </tr>
+        </tbody>
+        </table>
+        </div>
+    <script src="js/main.min.js"></script>
+//- ##end##

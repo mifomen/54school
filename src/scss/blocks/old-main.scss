@@ -1,0 +1,66 @@
+@import "blocks/variables.scss";
+@import "blocks/mixins.scss";
+body {
+ width: #{$desktop-w};
+ margin: 0 auto;
+ outline:2px solid darkorange;
+ width: 1920px;
+ // display: block;
+ // overflow: hidden;
+ // font-family: 'Merriweather', serif;
+  // font-family: 'El Messiri', sans-serif;
+
+}
+
+// img {
+//  border:2px solid darkorange;
+// }
+
+@import "blocks/main_can_help.scss";
+@import "blocks/header.scss";
+// @import "blocks/main.scss";
+
+
+// @import "blocks/author-intro.scss";
+
+// @import "blocks/about-author.scss";
+
+// @import "blocks/what-i-do.scss";
+
+// @import "blocks/scroll.scss";
+// @import "blocks/mixins.scss";
+// * {
+//  outline: 2px solid darkblue;
+// }
+
+// @import "../../node_modules/slick-carousel/slick/slick.scss";
+// .slider {
+//   background-color: red;
+// }
+// .slider-item {
+//   background-color: #eda;
+//   width: 500px;
+//   height: 200px;
+//   padding: 20px;
+//   margin: 20px;
+// }
+// .slider-item:nth-child(0) {
+//   background-color: yellow;
+//   content:"2";
+// }
+// .slider-item:nth-child(1) {
+//   background-color: green;
+//   content:"3";
+// }
+// .slider-item:nth-child(2) {
+//   background-color: darkorange;
+//   content:"3";
+// }
+// .slider-item:nth-child(3) {
+//   background-color: blue;
+//   content:"3";
+// }
+// .slider-item:nth-last-child(0) {
+//   background-color: orange;
+//   content:"3";
+// }

@@ -1,0 +1,102 @@
+// .main {
+
+
+//   &__wrapper {
+//     @extend .wrapper;
+//     display: flex;
+//     // @extend .out;
+//   }
+//   &__col {
+//     display: flex;
+//     align-items: center;
+//     flex-direction: column;
+//     justify-content: flex-start;
+//   }
+//   &__title  {
+//     font-size: 55px;
+//     font-weight: bold;
+//     color: #3399cc;
+//     // width: 65%;
+//     @extend .out;
+//     text-align: center;
+//   }
+
+//   &__form {
+//     // @extend .out;
+//     padding: 5%;
+//     width: 100%;
+//     border: 6px solid #3399cc;
+//     border-radius: 20px;
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-around;
+//     position: relative;
+//     z-index: -1;
+//     &-input {
+//       border:1px solid #999;
+//       padding: 13px 17px; 
+//       border-radius: 10px;
+//       color: black;
+//     }
+
+//     &-title {
+//       font-size: 30px;
+//       font-weight: bold;
+//     }
+//     &-submit {
+//       @extend .bg-g;
+//       border:1px solid #999;
+//       padding: 13px 17px; 
+//       border-radius: 10px;
+//       color: black;
+//       font-weight: bold;
+//     }
+//     &-col {
+//       // position: relative;
+//       // z-index: 4;
+//       @extend .out;
+//       // width: 400px;
+//       display: flex;
+//       flex-direction: columns;
+//       justify-content: space-around;
+//       align-items: center;
+//       & section {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//       }
+//    }
+//     &-p {
+//         // position: absolute;
+//       display: inline-blocks;
+//       background-color: #fff;
+      
+//       top:-80px;
+//       left:0;
+//       font-size: 22px;
+//       font-weight: bold;
+//     }
+//     &-img {
+//     display: inline-blocks;
+//       z-index: 6;
+//     }
+//     &-checkbox {
+//       width: 100%;
+
+//     }
+
+//   }
+// }
+
+// ::-webkit-input-placeholder { /* WebKit browsers */
+//  color:    black;
+// }
+// :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+//  color:    black;
+// }
+// ::-moz-placeholder { /* Mozilla Firefox 19+ */
+//  color:    black;
+// }
+// :-ms-input-placeholder { /* Internet Explorer 10+ */
+//  color:    black;
+// }

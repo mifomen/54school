@@ -1,0 +1,588 @@
+#layout2 {
+min-height: 500px; 
+/* mifomen
+min-width:600px; 
+*/
+width:auto;
+}
+
+#lay_body {
+  border-radius: 25px;
+  background-color: transparent;
+}
+/* блок по середине текучесть*/
+
+
+
+/*animation*/
+
+@keyframes AimationY {
+0% {
+transform:translateY(0px);
+}
+25% {
+transform:translateY(0px);
+}
+35% {
+transform:translateY(-46px);
+}
+65% {
+transform:translateY(-46px);
+}
+75% {
+transform:translateY(0px);
+}
+100% {
+transform:translateY(0px);
+}
+}
+    @keyframes border-green {
+    0% {border:10px double rgba(0,0,123,1);}
+    35% {border:10px double rgba(0,128,0,1);}
+    65% {border:10px double rgba(0,128,0,1);}
+    100% {border:10px double rgba(0,0,123,1);}
+  }
+
+  @keyframes border {
+    0% {border:4px solid transparent;}
+    35% {border:4px solid white;}
+    65% {border:4px solid white;}
+    100% {border:4px solid transparent;}
+  }
+  @keyframes winner {
+    0% {transform: scale(1);}
+    25% {transform: scale(1);}
+    35% {transform: scale(1.1);}
+    65% {transform: scale(1.1);}
+    75% {transform: scale(1);}
+    100% {transform: scale(1);}
+  }
+
+
+.txt-main-page {
+
+    animation: winner 5s infinite ease;
+    background-color: transparent;
+    outline: transparent;
+    border:0;
+    font-size: 24px;
+    color: #33f;
+    color: rgb(226, 0, 0); 
+    font-style: italic;
+    font-weight: bold; 
+    font-family: times new roman;
+padding: 10px 5px;
+transition: 500ms ease;
+
+  }
+  .txt-main-page:hover,
+  .txt-main-page:focus {
+   text-decoration: underline;
+   font-size: 26px;
+cursor: pointer;
+ }
+
+
+/* header animation schhooold of inculusion*/
+
+.school-text-conteiner {
+  transition-duration: 1600ms;
+  transition-timing-function: ease;
+  display: block;
+  font-family: verdena;
+  font-size: 27px;
+  
+  font-style:normal;
+  background:#64D637;
+  width:600px;
+  height: 54px;
+
+  border-radius:25px;
+
+  display:black;
+  color: white;
+  border: 3px solid #4528EA;
+  text-shadow: 1px 1px 2px black, 0 0 2px red;
+  text-transform: uppercase;
+  text-align:center;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: bold;
+
+}
+
+.school-text-conteiner:hover {
+box-shadow: inset 1px 1px 25px 2px #4FE280;
+
+}
+.school-text-conteiner span {
+  line-height: 50px;
+  padding-bottom: 20px;
+}
+.school-text-conteiner a {
+  line-height: 40px;
+  text-decoration: none;
+  color: white;
+  font-style:normal;
+  text-shadow: 1px 1px 2px black, 0 0 2px red;
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+  padding-top:20px;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+.inner-conteiner {
+  transition-duration: 1600ms;
+  transition-timing-function: ease;
+  animation: AimationY 15s infinite ease;
+}
+
+
+/*.school-text-conteiner .inner-conteiner a:hover {
+  text-decoration: underline;
+
+  transition-duration: 300ms;
+  transform:translateY(-46px);
+}*/
+
+.school-text-conteiner:hover > .inner-conteiner {
+  transition-duration: 1600ms;
+  transition-timing-function: ease;
+  transform:translateY(-46px);
+  font-size:27px;
+  border:0px solid rgba(0,144,0,0.9);
+  text-shadow:  0 0 2px red, 1px 1px 2px black;
+  white-space: nowrap;
+  overflow: hidden;
+
+}
+.link {
+  color:white;
+  font-size: 27px;
+}
+.udnerline {
+  text-decoration: underline;
+}
+
+.news-temple {
+  padding:0;
+  margin:0;
+  width: 65vw;
+font-size: 24px;
+animation: border 2s infinite ease;
+background-color: rgba(0,128,0,1);
+color: white;
+font-family: verdena;
+padding: 10px;
+border-radius: 25px;
+animation: border 8s infinite ease;
+position: fixed;
+left: 50%;
+transform: translateX(-50%); 
+z-index: 60;
+text-align: center;
+top: 20vh;
+}
+.news-temple-button {
+outline: none;
+  background-color: transparent;
+font-weight: bold;
+ font-family: Georgia, Tahoma, 'serif';
+   transition: 230ms linear;
+   border-radius: 22px;
+border:none;
+color: #fff;
+font-size: 22px;
+ transition: 230ms linear;
+
+ text-transform: uppercase ;
+
+
+
+
+}
+/* MAKET SPECIFIC STYLES */
+
+/* BODY */
+#lay_body {}
+
+/* END BODY */
+
+/* BLOCK 1 */
+#lay_f1{padding-left:0px;padding-top:0px;}
+/* END BLOCK 1 */
+
+/* BLOCK 2 */
+#lay_f2 {padding: 25px 65px 28px 25px; width:175px;} 
+/*#lay_f2 p {padding:0px; margin:4px 0px;}*/
+/* END BLOCK 2 */
+
+/* BLOCK 3 */
+#lay_f3 { content:"mama"; border-top: transparent 4px solid; font-size: 0.85em; padding: 10px 0 0 4px; text-align:center;}
+/* END BLOCK 3 */
+
+
+/* BLOCK 5 */
+#lay_f5 {padding: 5px 15px 10px 28px;}
+/* END BLOCK 5 */
+
+/* BLOCK 4 */
+#lay_f4 {padding: 125px 25px 10px 65px;}
+/* END BLOCK 4 */
+
+
+.box-border {
+border:3px solid rgba(0, 0, 139,0);
+-webkit-transition-timing-function:ease;
+     -o-transition-timing-function:ease;
+        transition-timing-function:ease;
+-webkit-transition-duration: 500ms;
+     -o-transition-duration: 500ms;
+        transition-duration: 500ms;
+}
+
+.box-border:hover {
+border:3px solid rgba(0, 0, 192,1);
+-webkit-transition-timing-function:ease;
+     -o-transition-timing-function:ease;
+        transition-timing-function:ease;
+-webkit-transition-duration: 500ms;
+     -o-transition-duration: 500ms;
+        transition-duration: 500ms;
+}
+
+
+
+.feedback-btn {
+  position:fixed;
+  right:0px;
+  bottom:0px;
+  margin:0;
+  display:block;
+  z-index: 777;
+  border-radius: 25px;
+  color: white;
+  text-decoration: none;
+  font-size: 23px;
+  transform: rotate(0deg);
+  cursor:pointer;
+  /*background: linear-gradient(to bottom, rgba(0,162,0,1) 0%, rgba(0,162,0,1) 20%, rgba(0,162,0,0.8)  80%, rgba(0,162,0,0.8) 85%, rgba(0,162,0,1) 100%);
+  */
+  transition: 1100ms ease;
+}
+.feedback-btn img {
+  width:100px;
+  height:auto:
+}
+.feedback-btn:hover {
+  -webkit-transform: rotate(-20deg); 
+  -moz-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+  transform: translate(-20px, -20px);
+  text-decoration: underline;
+  /*background: linear-gradient(to bottom, rgba(0,162,0,1) 0%, rgba(0,192,0,1) 20%, rgba(0,192,0,0.8)  80%, rgba(0,192,0,0.8) 85%, rgba(0,192,0,1) 100%);
+  */right: 10px;
+  transition: 800ms ease;
+}
+
+.feedback-btn:hover img {
+  width:70px;
+  height:auto:
+}
+
+
+
+
+
+
+
+/*оформление обычный текстовых новостей*/
+.quick-news {
+font-family:"Times New Roman", serif;
+font-size:16px;
+text-align:center;
+line-height: 1.2;
+}
+
+/*стилизация главной страницы, фото директора и описание школы*/
+
+.director {
+border-radius:10px;
+ border: 3px solid rgba(0, 90, 0, 0.8);
+ background-color: rgba(0, 162, 0, 0.2);
+ float:left;
+}
+.main {
+  color: rgba(0,114,0,1);
+  font-size: 18px;
+  font-style: italic;
+  text-indent: 20px;
+}
+.main a, .text_in_title a  {
+  text-decoration: none;
+}
+.main a:hover, .text_in_title a:hover  {
+  text-decoration: underline;
+}
+.text_in_title {
+font-family: 'Times New Roman', Tahoma, 'serif';
+font-style: italic;
+font-weight: bold;
+font-size: 120%;
+color: #000;
+}
+
+.text_in_title__email {
+color:rgba(0,114,0,1);
+}
+.text_in_title__position {
+ color: rgba(35,37,178,1);
+ font-weight: bold;
+ font-family: 'Georgia', Tahoma, 'serif';
+ font-size: 20px;
+}
+
+
+/*Версия для слабовидящих*/
+
+#text-block {
+
+color: rgb(226, 0, 0); 
+font-style: italic;
+ font-weight: bold; 
+font-family: times new roman;
+animation: winner 5s infinite ease;
+}
+
+.title-on-main-page-header {
+font-size: 24px; 
+font-family: 'Roboto', 'Times New Roman',sans-serif; 
+font-weight: bold;
+color: rgb(0,0,128);
+}
+
+.footer {
+font-size: 20px;
+font-weight: bold;
+font-style: italic;
+color: #000080;
+}
+
+.flex-space {
+
+  text-align: center;
+  flex-wrap: wrap;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.flex-space h1 {
+  font-family: 'Roboto', 'Times New Roman',sans-serif; 
+  margin:0;
+  font-size: 20px;
+  padding:0;
+  font-style: normal;
+
+}
+
+/* оформление титульной страницы с директором*/
+.title-page p {
+  margin: 0; }
+
+.title-page {
+  font-family: Georgia;
+  font-size: 18px;
+  font-family: 'Merriweather', 'Georgia',serif;
+  text-align: center; }
+  .title-page__indent {
+    color: #007200; }
+  .title-page__link {
+    color: #419015;
+    font-weigth: bold; }
+  .title-page__border-with-director {
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 35%; 
+margin-right: 20px;}
+
+.italic {
+  font-style: italic; }
+
+.title-page__border-with-director {
+  float: left; }
+  .title-page__border-with-director--img {
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    border: 3px solid rgba(0, 90, 0, 0.8);
+    background-color: rgba(0, 162, 0, 0.2);
+    width: 100%; }
+  .title-page__border-with-director--title {
+    color: #3434ff;
+    font-weight: bold; }
+
+
+
+  /*--------------- coockie form----------------------*/
+  @keyframes scalecoockie {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.05);}
+    100% {transform: scale(1);}
+  }
+  @keyframes cookiebtn {
+    0% {transform: rotate(45deg) scale(1);}
+    50% {transform: rotate(45deg) scale(1.2);}
+    100% {transform: rotate(45deg) scale(1);}
+  }
+
+  .cookie {
+    width: 300px;
+    padding: 15px;
+    display: flex;
+    /*flex-direction: column;*/
+    position:relative;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 5px solid rgba(0,120,0,1);
+    border-radius: 25px;
+    transition: scalecoockie 500ms ease;
+    font-family: Merriweather,'Courier New', monospace;
+    /*animation: scalecoockie 500ms infinite;*/
+    transition: 500ms ease;
+z-index: 999;
+background-color: white;
+background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAAABlBMVEX///+pqalTpKl9AAAAAnRSTlMAGovxNEIAAAAdSURBVDjLY2AAAUaG4UYxDDsfjfp91O+jfqfE7wCzpQCw/dq+qQAAAABJRU5ErkJggg==");
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    
+  }
+  .cookie:hover {
+    animation: scalecoockie 500ms ease;
+  }
+  .cookie:focus {
+   animation: scalecoockie 500ms ease;
+
+ }
+ .cookie__close-btn {
+  font-size: 0;
+  position: absolute;
+  background-color: rgba(0,230,0,1);
+
+  width: 30px;
+  height: 9px;
+  transform: rotate(45deg);
+  outline:none;
+  border:none;
+  right: 10%;
+  top: 10%;
+
+}
+.cookie__close-btn:after {
+  background-color: rgba(0,230,0,1);
+
+  width: 30px;
+  height: 9px;
+  content:'';
+  position: absolute;
+  top:0px;
+  left:0px;
+  transform: rotate(-90deg);
+
+
+}
+.cookie__close-btn:hover{
+ animation: cookiebtn 500ms ease;
+}
+.cookie__title {
+  width: 100%;
+  margin-right: auto;
+  font-size: 14px;
+
+}
+.cookie__message {
+  width: 100%;
+  text-align: justify;
+  font-size: 14px;
+}
+.cookie-btn {
+  padding:5px 15px;
+  background-color: rgba(0,127,0,1);
+  border:5px solid rgb(0,0,80,1);
+  border-radius: 25px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 500ms ease;
+  text-shadow: 1px 1px 2px #000;
+  font-size: 14px;
+}
+.cookie-btn:hover {
+  text-decoration: underline;
+  transition: 500ms ease;
+  box-shadow: 5px 5px 15px 0px #000;
+}
+
+.cookie-btn-ok{
+  background-color: rgba(0,180,0,1);
+}
+.cookie-btn-ok:hover{
+  background-color: rgba(0,230,0,1);
+}
+.cookie-btn-need-more {
+  background-color: rgba(0,110,0,1);
+}
+.cookie-btn-need-more:hover {
+  background-color: rgba(0,180,0,1);
+
+}
+.mr-auto {
+  margin-right: auto;
+}
+.ml-auto {
+  margin-left: auto;
+}
+
+/*базовые стили*/
+h2 {
+margin:0;
+padding:0;
+color: rgba(0,152,0,1);
+font-size: 20px;
+font-family:"Times New Roman",serif;
+}
+
+.scaleX:hover {
+
+transofrm: scale(1.2);
+}
+
+
+.fin {
+border:2px solid black;
+font-size: 14px;
+
+width: 80%;
+}
+.fin tr:nth-child(1) {
+text-align:center;
+}
+
+.td-2 td:nth-last-child(1) {
+width: 22%;
+}
+.fin td,
+.fin tr {
+    padding: 5px; 
+    border: 1px solid black;
+}
+
+
