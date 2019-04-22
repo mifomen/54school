@@ -1,25 +1,105 @@
-<div class="new-slider" style=" width: 650px; height: 500px;">
-  <button class="new-slider left"> left</button>
-  <button class="new-slider right"> right</button>
-  <h1 class="visually-hidden">Новостной слайдер</h1>
-  <div class="new-slider__card" style="width:200px;">
-    <img src="http://54school.ru/_mod_files/ce_images/5april2019/0009.jpg" width=100% alt="pircture">
-    <span class="">Школьный художественный конкурс «Как я вижу весну»</span>
-  </div>
-    <div class="new-slider__card" style="width:200px;">
-    <img src="http://54school.ru/_mod_files/ce_images/5april2019/0009.jpg" width=100% alt="pircture">
-    <span class="">Школьный художественный конкурс «Как я вижу весну»</span>
-  </div>
-    <div class="new-slider__card" style="width:200px;">
-    <img src="http://54school.ru/_mod_files/ce_images/5april2019/0009.jpg" width=100% alt="pircture">
-    <span class="">Школьный художественный конкурс «Как я вижу весну»</span>
-  </div>
-    <div class="new-slider__card" style="width:200px;">
-    <img src="http://54school.ru/_mod_files/ce_images/5april2019/0009.jpg" width=100% alt="pircture">
-    <span class="">Школьный художественный конкурс «Как я вижу весну»</span>
-  </div>
-    <div class="new-slider__card" style="width:200px;">
-    <img src="http://54school.ru/_mod_files/ce_images/5april2019/0009.jpg" width=100% alt="pircture">
-    <span class="">Школьный художественный конкурс «Как я вижу весну»</span>
-  </div>
+<div class="new-slider" >
+ <!--  onmouseover="StopTimer()"  onmouseover="StopTimer()" -->
+ <button class="new-slider left" onClick="SlideLeft()"><</button>
+ <button class="new-slider right" onClick="SlideRight()">></button>
+
+ <h1 class="visually-hidden">Новостной слайдер</h1>
+ <ul class="new-slider__wrapper" id=list>
+  
+</ul>
 </div>
+
+
+<script>
+  var x = 250;
+  let SlideLeft = function () {
+    console.log('x= ' + x)
+    // document.querySelector('.new-slider__card').style.opacity=0;
+    document.querySelector('.new-slider__wrapper').style.transform = 'translateX(-' + x + 'px)'
+    if (x<900)  {x+=250}  else {x=0} 
+
+  }
+let SlideRight = function () {
+ console.log('SlideRight')
+ document.querySelector('.new-slider__wrapper').style.transform = 'translateX(0)';
+ x=250;
+
+}
+// var timerId = setInterval(function() {
+//   SlideLeft();
+// }, 500);
+
+//  let StopTimer = function () {
+//   clearInterval(timerId)
+//   console.log(timerId)
+//  }
+ // let StartTimer = function () {
+ //  setInterval(SlideLeft, 1000);
+
+
+ //  console.log('start' + timerId)
+ // }
+ // setInterval(SlideLeft, 1000);
+
+// clearInterval(timerId)
+
+// setTimeout(function() {
+//   clearInterval(timerId);
+//   alert('stop');
+// }, 5000);
+var mas = [
+{
+href:"http://54school.ru/news3/shkolnyj-hudozhestvennyj-konkurs-kak-ja",
+text:"Школьный художественный конкурс «Как я вижу весну»",
+imgSrc:"http://54school.ru/_mod_files/ce_images/5april2019/0009.jpg"
+
+},
+{
+href:"http://54school.ru/news3/anons-meroprijatij-na-zimnie-kanikuly",
+text:"Анонс мероприятий на зимние каникулы",
+imgSrc:"http://54school.ru/_mod_files/ce_images/christmas2019/slide1.jpg"
+},
+{
+  href:"https://na.ria.ru/20181022/1531069799.html",
+text:"Что нужно знать о своих правах на ЕГЭ и как действовать!",
+imgSrc:"https://cdn22.img.ria.ru/images/153106/83/1531068357_0:0:998:2629_998x0_80_0_0_46ec4c0d21f0cf8beecaed523c0cdaa6.png"
+}
+]
+
+function addElem(href,txt,imgSrc) {
+var newLi = document.createElement('li');
+newLi.classList="new-slider__card";
+// newLi.textContent = 'Привет, мир!';
+
+var link = document.createElement('a');
+link.classList="mifomen"
+link.target="_blank";
+link.href=href;
+
+var newText= document.createElement('span');
+newText.textContent=txt;
+
+var newImg = document.createElement('img');
+newImg.src=imgSrc;
+newImg.width="100%";
+newImg.alt="picture";
+
+list.appendChild(newLi);
+newLi.appendChild(link);
+link.appendChild(newImg);
+link.appendChild(newText);
+}
+
+
+
+setTimeout(function() {
+for (var i=0; i<=1; i++) {
+  addElem(mas[i].href,mas[i].text,mas[i].imgSrc)
+}
+}, 1000);
+
+
+
+
+
+</script>
