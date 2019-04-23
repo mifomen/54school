@@ -263,9 +263,15 @@ transition: 500ms ease;
   
 
 
-  height: 250px;
+  height: 150px;
    width: 250px; 
    overflow: hidden;
+   border-radius: 15px;
+   border: 2px solid rgba(0,137,0,1);
+   & * {
+
+    box-sizing: border-box;
+    }
 & ul {
   margin:0;
   padding:0;
@@ -277,7 +283,7 @@ transition: 500ms ease;
 }
 }
 .new-slider * {
-  outline: 2px solid green;
+  // outline: 2px solid green;
   box-sizing: border-box;
 }
 .new-slider button {
@@ -299,7 +305,7 @@ font-size: 0px;
  background-image: url('http://54school.ru/_mod_files/ce_images/arrow_menu.png');
  background-repeat: no-repeat;
  background-position: 50% 50%;
- border:2px solid red;
+ // border:2px solid red;
 
 }
 .left {
@@ -331,7 +337,7 @@ font-size: 0px;
   min-width: 250px;
   width: 250px;
   display: block;
-  border: 2px solid rgba(0,137,0,1);
+  // border: 2px solid rgba(0,137,0,1);
   
   // width: 200px;
     min-height: 150px;

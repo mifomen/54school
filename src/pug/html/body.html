@@ -1,141 +1,133 @@
-<div class="new-slider" >
- <!--  onmouseover="StopTimer()"  onmouseover="StopTimer()" -->
- <button class="new-slider left" onClick="SlideLeft()"><</button>
- <button class="new-slider right" onClick="SlideRight()">></button>
 
- <h1 class="visually-hidden">Новостной слайдер</h1>
- <ul class="new-slider__wrapper" id=list>
-
- </ul>
-</div>
-
-
-<script>
-
-// var timerId = setInterval(function() {
-//   SlideLeft();
-// }, 500);
-
-//  let StopTimer = function () {
-//   clearInterval(timerId)
-//   console.log(timerId)
-//  }
- // let StartTimer = function () {
- //  setInterval(SlideLeft, 1000);
-
-
- //  console.log('start' + timerId)
- // }
- // setInterval(SlideLeft, 1000);
-
-// clearInterval(timerId)
-
-// setTimeout(function() {
-//   clearInterval(timerId);
-//   alert('stop');
-// }, 5000);
-var mas = [
-{
-  href:"http://54school.ru/news3/shkolnyj-hudozhestvennyj-konkurs-kak-ja",
-  text:"Школьный художественный конкурс «Как я вижу весну»",
-  imgSrc:"http://54school.ru/_mod_files/ce_images/5april2019/0009.jpg"
-
-},
-{
-  href:"http://54school.ru/news3/anons-meroprijatij-na-zimnie-kanikuly",
-  text:"Анонс мероприятий на зимние каникулы",
-  imgSrc:"http://54school.ru/_mod_files/ce_images/christmas2019/slide1.jpg"
-},
-{
-  href:"https://na.ria.ru/20181022/1531069799.html",
-  text:"Что нужно знать о своих правах на ЕГЭ и как действовать!",
-  imgSrc:"https://cdn22.img.ria.ru/images/153106/83/1531068357_0:0:998:2629_998x0_80_0_0_46ec4c0d21f0cf8beecaed523c0cdaa6.png"
-}
-]
-
-function addElem(href,txt,imgSrc) {
-  var newLi = document.createElement('li');
-  newLi.classList="new-slider__card";
-// newLi.textContent = 'Привет, мир!';
-
-var link = document.createElement('a');
-link.classList="mifomen"
-link.target="_blank";
-link.href=href;
-
-var newText= document.createElement('span');
-newText.textContent=txt;
-
-var newImg = document.createElement('img');
-newImg.src=imgSrc;
-newImg.width="100%";
-newImg.alt="picture";
-
-list.appendChild(newLi);
-newLi.appendChild(link);
-link.appendChild(newImg);
-link.appendChild(newText);
-}
-
-
-
-// setTimeout(function() {
-//   for (var i=0; i<=2; i++) {
-//     addElem(mas[i].href,mas[i].text,mas[i].imgSrc)
-//   }
-// }, 10);
-
-
-// var x = 250;
-var x=0;
-var Count=0;
-addElem(mas[Count].href,mas[Count].text,mas[Count].imgSrc)
-var NewsSliderCount=250*(mas.length-1)
-
-// console.log('NewsSliderCount= ' + NewsSliderCount)
-
-let SlideLeft = function () {
-  // if (x<NewsSliderCount)  {x+=250}  
-    x+=250
-    document.querySelector('.new-slider__wrapper').style.transform = 'translateX(-' + x + 'px)'
-  // console.log('x= ' + x)
-  Count+=1;
-}
-let SlideRight = function () {
-
- if (x<=NewsSliderCount)  {x-=250}  
-  if (x<1) {x=0}
-   // console.log('NewsSliderCount= ' + NewsSliderCount)
- // console.log('RIGHT x= ' + x)
- document.querySelector('.new-slider__wrapper').style.transform = 'translateX(-' + x + 'px)';
- Count-=1;
+<style>
+.table-of-admins caption {
+  color: blue;
+  font-family: verdena;
+  font-size: 34px;
+  font-weight:bold;
+  margin-bottom: 40px;
 
 }
-var ii=0;
-var timerIdd = setInterval(function() {
-  
- if (Count<mas.length) {
-  SlideLeft();
-  // console.log('Count ' + Count)
-// if (Count==3) {
-//     while (Count>0) do {
-//       // SlideRight()
-//       alert(Count)
-//       count-=1
-//     }
-// } else {}
-  
-         
-  }
-  
-  if (Count==mas.length) {Count=0} else {}
-     
-  // console.log('Count ' + Count)
-addElem(mas[Count].href,mas[Count].text,mas[Count].imgSrc)
-}, 500);
+.table-of-admins {
 
+  font-size: 24px;
+  color: red;
+  text-align: center;
+  border:2px solid black;
+  width:auto;
+  min-width: 500px;
+}
+.table-of-admins  img {
+  width: 230px;
+  border-radius: 10px;
+}
+.table-of-admins td {
+  border:2px solid black;
 
-// var timerId = setInterval(function() {
-//   SlideLeft();
-// }, 500);
-</script>
+}
+
+.table-of-admins  p{
+ font-size: 14px;
+ font-weight: bold;
+ color:#000080;
+ font-family: Verdana;
+}
+
+</style>
+
+<table class="table-of-admins">
+  <caption>Руководство школы</caption>
+  <tbody><tr border="2">
+    <td>
+      <!--<img src="http://54school.ru/_mod_files/ce_images/admin/jpg.29.jpg"> -->
+      <img style="
+      border: 1px solid rgba(0, 90, 0, 0.8);
+      background-color: rgba(0, 162, 0, 0.2);
+      " src="http://54school.ru/_mod_files/ce_images/admin/main-director2.jpg">
+    </td>
+    <td>
+     <p>Митясова Ольга Александровна</p>
+     <p> Директор школы</p>
+     <p>Образование - высшее, НГПУ</p>
+     <p>Специальность: учитель экономики, технологии и предпринимательства</p>
+     <p>8(831)417-69-66</p>
+     <p>e-mail: VITA541@yandex.ru</p><p>II место в номинации "Лучший молодой директор" в первом Региональном конкурсе "Лучший руководитель года"<br></p>
+   </td>
+ </tr>
+ <tr>
+  <td>
+   <img src="http://54school.ru/_mod_files/ce_images/admin/lujkova.jpg">
+ </td>
+ <td>
+  <p>Лужкова Ольга Анатольевна</p>
+  <p>Заместитель директора</p><p>Образование - высшее, НГПУ</p><p>Специальность: учитель химии<br></p>
+  <p>8(831)468-19-93</p>
+  <p>e-mail: VITA541@yandex.ru</p>
+</td>
+</tr>
+<tr>
+  <td>
+   <img src="http://54school.ru/_mod_files/ce_images/admin/jpg.51.jpg">
+ </td>
+ <td>
+   <p>Шекунова Татьяна Григорьевна</p>
+   <p>Заместитель директора </p>
+   <p>Образование - высшее, ГГПИ</p>
+   <p>Специальность: учитель начальных классов и ОБЖ</p>
+   <p>Преподаваемые дисциплины: ОБЖ</p>
+   <p>8(831)468-19-93</p>
+   <p>e-mail: VITA541@yandex.ru</p>
+ </td>
+</tr>
+<tr>
+  <td><img style="
+  border: 1px solid rgba(0, 90, 0, 0.8);
+  background-color: rgba(0, 162, 0, 0.2);
+  " src="http://54school.ru/_mod_files/ce_images/admin/gorbunova2.png">
+</td>
+<td>
+  <p>Горбунова Лариса Вячеславовна</p>
+  <p>Заместитель директора</p>
+  <p>Образование - высшее, ННГУ</p>
+  <p>Специальность: биолог, преподаватель биологии и химии</p>
+  <p>Преподаваемые дисциплины: химия</p>
+  <p>8(831)468-19-93</p>
+  <p>e-mail: VITA541@yandex.ru</p>
+</td>
+</tr>
+<tr>
+  <td>
+   <img src="http://54school.ru/_mod_files/ce_images/admin/komleva.jpg">
+ </td>
+ <td>
+  <p>Комлева Юлия Николаевна</p>
+  <p>Заместитель директора </p>
+  <p>Образование - высшее, НГПУ</p>
+  <p>Специальность: учитель географии и ОБЖ</p>
+  <p>Преподаваемые дисциплины: биология</p>
+  <p>8(831)468-19-93</p>
+  <p>e-mail: VITA541@yandex.ru</p>
+</td>
+</tr>
+<tr>
+  <td>
+    <img style="
+    border: 1px solid rgba(0, 90, 0, 0.8);
+    background-color: rgba(0, 162, 0, 0.2);
+    " src="http://54school.ru/_mod_files/ce_images/admin/img_6320.png">
+  </td>
+  <td>
+    <p>Абрашин Александр Викторович</p>
+    <p>Заместитель директора </p>
+    <p>Образование - высшее, МИНХ им. Плеханова</p>
+    <p>Специальность: инженер-механик</p>
+    <p>Преподаваемые дисциплины: технология</p>
+    <p>8(831) 468-04-67</p>
+    <p>e-mail: VITA541@yandex.ru</p>
+  </td>
+</tr>
+</tbody>
+</table>
+<br><br>
+<span>Все персональные данные размещены с согласия субъекта(ов) на обработку персональных данных<br>
+Информация, содержащаяся в разделе «Сведения об образовательной организации», однозначно идентифицируются как обязательный к размещению контент</span>
