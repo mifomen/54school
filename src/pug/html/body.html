@@ -5,26 +5,13 @@
 
  <h1 class="visually-hidden">Новостной слайдер</h1>
  <ul class="new-slider__wrapper" id=list>
-  
-</ul>
+
+ </ul>
 </div>
 
 
 <script>
-  var x = 250;
-  let SlideLeft = function () {
-    console.log('x= ' + x)
-    // document.querySelector('.new-slider__card').style.opacity=0;
-    document.querySelector('.new-slider__wrapper').style.transform = 'translateX(-' + x + 'px)'
-    if (x<900)  {x+=250}  else {x=0} 
 
-  }
-let SlideRight = function () {
- console.log('SlideRight')
- document.querySelector('.new-slider__wrapper').style.transform = 'translateX(0)';
- x=250;
-
-}
 // var timerId = setInterval(function() {
 //   SlideLeft();
 // }, 500);
@@ -49,26 +36,26 @@ let SlideRight = function () {
 // }, 5000);
 var mas = [
 {
-href:"http://54school.ru/news3/shkolnyj-hudozhestvennyj-konkurs-kak-ja",
-text:"Школьный художественный конкурс «Как я вижу весну»",
-imgSrc:"http://54school.ru/_mod_files/ce_images/5april2019/0009.jpg"
+  href:"http://54school.ru/news3/shkolnyj-hudozhestvennyj-konkurs-kak-ja",
+  text:"Школьный художественный конкурс «Как я вижу весну»",
+  imgSrc:"http://54school.ru/_mod_files/ce_images/5april2019/0009.jpg"
 
 },
 {
-href:"http://54school.ru/news3/anons-meroprijatij-na-zimnie-kanikuly",
-text:"Анонс мероприятий на зимние каникулы",
-imgSrc:"http://54school.ru/_mod_files/ce_images/christmas2019/slide1.jpg"
+  href:"http://54school.ru/news3/anons-meroprijatij-na-zimnie-kanikuly",
+  text:"Анонс мероприятий на зимние каникулы",
+  imgSrc:"http://54school.ru/_mod_files/ce_images/christmas2019/slide1.jpg"
 },
 {
   href:"https://na.ria.ru/20181022/1531069799.html",
-text:"Что нужно знать о своих правах на ЕГЭ и как действовать!",
-imgSrc:"https://cdn22.img.ria.ru/images/153106/83/1531068357_0:0:998:2629_998x0_80_0_0_46ec4c0d21f0cf8beecaed523c0cdaa6.png"
+  text:"Что нужно знать о своих правах на ЕГЭ и как действовать!",
+  imgSrc:"https://cdn22.img.ria.ru/images/153106/83/1531068357_0:0:998:2629_998x0_80_0_0_46ec4c0d21f0cf8beecaed523c0cdaa6.png"
 }
 ]
 
 function addElem(href,txt,imgSrc) {
-var newLi = document.createElement('li');
-newLi.classList="new-slider__card";
+  var newLi = document.createElement('li');
+  newLi.classList="new-slider__card";
 // newLi.textContent = 'Привет, мир!';
 
 var link = document.createElement('a');
@@ -92,14 +79,63 @@ link.appendChild(newText);
 
 
 
-setTimeout(function() {
-for (var i=0; i<=1; i++) {
-  addElem(mas[i].href,mas[i].text,mas[i].imgSrc)
+// setTimeout(function() {
+//   for (var i=0; i<=2; i++) {
+//     addElem(mas[i].href,mas[i].text,mas[i].imgSrc)
+//   }
+// }, 10);
+
+
+// var x = 250;
+var x=0;
+var Count=0;
+addElem(mas[Count].href,mas[Count].text,mas[Count].imgSrc)
+var NewsSliderCount=250*(mas.length-1)
+
+// console.log('NewsSliderCount= ' + NewsSliderCount)
+
+let SlideLeft = function () {
+  // if (x<NewsSliderCount)  {x+=250}  
+    x+=250
+    document.querySelector('.new-slider__wrapper').style.transform = 'translateX(-' + x + 'px)'
+  // console.log('x= ' + x)
+  Count+=1;
 }
-}, 1000);
+let SlideRight = function () {
+
+ if (x<=NewsSliderCount)  {x-=250}  
+  if (x<1) {x=0}
+   // console.log('NewsSliderCount= ' + NewsSliderCount)
+ // console.log('RIGHT x= ' + x)
+ document.querySelector('.new-slider__wrapper').style.transform = 'translateX(-' + x + 'px)';
+ Count-=1;
+
+}
+var ii=0;
+var timerIdd = setInterval(function() {
+  
+ if (Count<mas.length) {
+  SlideLeft();
+  // console.log('Count ' + Count)
+// if (Count==3) {
+//     while (Count>0) do {
+//       // SlideRight()
+//       alert(Count)
+//       count-=1
+//     }
+// } else {}
+  
+         
+  }
+  
+  if (Count==mas.length) {Count=0} else {}
+     
+  // console.log('Count ' + Count)
+addElem(mas[Count].href,mas[Count].text,mas[Count].imgSrc)
+}, 500);
 
 
-
-
-
+// var timerId = setInterval(function() {
+//   SlideLeft();
+// }, 500);
 </script>

@@ -256,14 +256,16 @@ transition: 500ms ease;
   
   // border: 2px solid darkblue;
   display: flex;
-  align-items: flex-start;
-  align-content: flex-start;
+  // justify-content: center;
+  align-items: center;
+  align-content: center;
   position: relative;
-  max-height: 250px;
+  
 
-  // display: block;
-  overflow: hidden;
+
+  height: 250px;
    width: 250px; 
+   overflow: hidden;
 & ul {
   margin:0;
   padding:0;
@@ -276,6 +278,7 @@ transition: 500ms ease;
 }
 .new-slider * {
   outline: 2px solid green;
+  box-sizing: border-box;
 }
 .new-slider button {
   width: 25px;
@@ -283,21 +286,30 @@ transition: 500ms ease;
   position:absolute;
  
   z-index:5;
-  color: yellow;
+font-size: 0px;
   border-radius: 50%;
   text-align: center;
   font-weight: bold;
-  font-size: 24px;
+  // font-size: 24px;
  top:50%;
  transform: translateY(-50%);
+ border: none;
+ outline: none;
+ background-color: transparent;
+ background-image: url('http://54school.ru/_mod_files/ce_images/arrow_menu.png');
+ background-repeat: no-repeat;
+ background-position: 50% 50%;
+ border:2px solid red;
+
 }
 .left {
   left:0px;
-  background-color:green; 
+  // background-color:green; 
+  // transform: translateX(12px) scaleX(12);
 }
 .right {
   right:0px;
-   background-color:red; 
+   // background-color:red; 
 }
 .new-slider__wrapper {
   transition: 500ms ease;
@@ -306,9 +318,10 @@ transition: 500ms ease;
   align-content: flex-start;
   position: relative;
     position: relative;
-   min-height: 145px;
-   max-height: 145px;
-     height: 145px;
+  
+   min-height: 150px;
+  max-height: 150px;
+  height: 150px;
 }
 .new-slider__card {
   position: relative;
@@ -318,9 +331,12 @@ transition: 500ms ease;
   min-width: 250px;
   width: 250px;
   display: block;
+  border: 2px solid rgba(0,137,0,1);
   
   // width: 200px;
-  height: 200px;
+    min-height: 150px;
+  max-height: 150px;
+  height: 150px;
   overflow: hidden;
 
 }
@@ -331,7 +347,7 @@ transition: 500ms ease;
 .new-slider span {
  position: absolute;
  font-size: 14px;
- bottom: 35%;
+ bottom: 5%;
 left: 2%;
  box-shadow: 1px 1px 5px 0 black;
  background-color: rgba(255,255,255,0.5);
