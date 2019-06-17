@@ -24,8 +24,7 @@
 <div class="right-col">
   <div class="new-slider" >
    <!--  onmouseover="StopTimer()"  onmouseover="StopTimer()" -->
-   <button class="new-slider left visually-hidden" onClick="SlideLeft()"><</button>
-   <button class="new-slider right visually-hidden" onClick="SlideRight()">></button>
+
 
    <h1 class="visually-hidden">Новостной слайдер</h1>
    <ul class="new-slider__wrapper" id=list>
@@ -37,204 +36,27 @@
 <a title="Полномочный представитель Президента Российской Федерации в Приволжском федеральном округе" href="http://www.pfo.ru/" target="_blank">
   <img title="" alt="" src="http://54school.ru/_mod_files/ce_images/home/pfo.jpg" width="110" height="44" border="0">
 </a>
-
 <a title="Нижегородский институт развития образования" href="http://niro.nnov.ru/" target="_blank">
   <img title="" alt="" src="http://54school.ru/_mod_files/ce_images/Shapka/icon.png" width="92" height="81" border="0">
 </a>
-
-
 <a title="Информационный портал государственных услуг" href="http://www.gu.nnov.ru/" target="_blank">
   <img title="" alt="" src="http://54school.ru/_mod_files/ce_images/Shapka/gu-2.png" width="101" height="109" border="0">
 </a>
-
 <a href="http://mon.gov.ru/pro/fgos/" target="_blank">Министерство образования и науки <br> Российской Федерации</a>
 
 <a target="_blank" href="http://www.ege.edu.ru/">
   <img title="" alt="" src="http://www.ege.edu.ru/common/upload/img/2019.png" width="94" height="52" border="0" align="">
 </a>
-
 <a target="_blank" title="Центр дистанционного образования" href="http://www.fond-detyam.ru/">
   <img title="" alt="" src="http://54school.ru/_mod_files/ce_images/Shapka/02.png" width="126" height="59" border="0" align="">
 </a>
-
 <a style="font-weight:bold; text-shadow: 1px 1px 3px #000; font-size: 24px; color: white; text-decoration: none; " target="_blank" href="http://xn--b1afankxqj2c.xn--p1ai">#СЕТЕВИЧОК</a>
-
-
-
-
-
 <a target="_blank" href="http://dnevnik.ru/">
   <img src="https://static.dnevnik.ru/img/logotypes/logotype.png" title="Дневник.ру" width="126" height="45">
 </a>
-
-
-<!--
-<a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdNCiJ09KsGJRhuDCCDARctMOsNqCr5-zFPxgAWbRw5DnJmZA/viewform?usp=sf_link"><img   src="http://54school.ru/_mod_files/ce_images/Shapka/supports.png" height="100px"></a>
--->
-
-
-
-
-
-
-
-
-
-
 <details class="tech-sup">
  <summary>Технические  проблемы</summary>
  <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdNCiJ09KsGJRhuDCCDARctMOsNqCr5-zFPxgAWbRw5DnJmZA/viewform">Заявка на устранение технических проблем</a>
  <br><br>
  <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfDKbzRQlvCMEa7IBTYwsUQrqv9U1MzPMDucMdH5EVmduhbFQ/viewform">Заявка на устранение проблем в Dnevnik.ru</a>
 </details>
-
-
-
-
-<script>
-
-// var timerId = setInterval(function() {
-//   SlideLeft();
-// }, 500);
-
-//  let StopTimer = function () {
-//   clearInterval(timerId)
-//   console.log(timerId)
-//  }
- // let StartTimer = function () {
- //  setInterval(SlideLeft, 1000);
-
-
- //  console.log('start' + timerId)
- // }
- // setInterval(SlideLeft, 1000);
-
-// clearInterval(timerId)
-
-// setTimeout(function() {
-//   clearInterval(timerId);
-//   alert('stop');
-// }, 5000);
-var NewsSliderArray = [
-{
-  href:"http://54school.ru/news3/shkolnyj-hudozhestvennyj-konkurs-kak-ja",
-  text:"Школьный художественный конкурс «Как я вижу весну»",
-  imgSrc:"http://54school.ru/_mod_files/ce_images/5april2019/0009.jpg"
-
-},
-{
-  href:"http://54school.ru/news3/anons-meroprijatij-na-zimnie-kanikuly",
-  text:"Анонс мероприятий на зимние каникулы",
-  imgSrc:"http://54school.ru/_mod_files/ce_images/christmas2019/slide1.jpg"
-},
-{
-  href:"https://na.ria.ru/20181022/1531069799.html",
-  text:"Что нужно знать о своих правах на ЕГЭ и как действовать!",
-  imgSrc:"https://cdn22.img.ria.ru/images/153106/83/1531068357_0:0:998:2629_998x0_80_0_0_46ec4c0d21f0cf8beecaed523c0cdaa6.png"
-}
-]
-
-function addElem(href,txt,imgSrc) {
-  var newLi = document.createElement('li');
-  newLi.classList="new-slider__card";
-
-  var link = document.createElement('a');
-  link.classList="mifomen"
-  link.target="_blank";
-  link.href=href;
-
-  var newText= document.createElement('span');
-  newText.textContent=txt;
-
-  var newImg = document.createElement('img');
-  newImg.src=imgSrc;
-  newImg.width="100%";
-  newImg.alt="picture";
-
-  list.appendChild(newLi);
-  newLi.appendChild(link);
-  link.appendChild(newImg);
-  link.appendChild(newText);
-
-//   var div = document.createElement('div');
-//   // div.className = "alert alert-success";
-//   // div.innerHTML = "<strong>Ура!</strong> Вы прочитали это важное сообщение.";
-//   // list.appendChild(div);
-//   // document.body.insertBefore(list, document.body.firstChild);
-
-//   // создать копию узла
-//   var div2 = newLi.cloneNode(true);
-//   // копию можно подправить
-// div2.querySelector('span').textContent = 'YA COPY!!';
-//   // вставим её после текущего сообщения
-//   newLi.parentNode.insertBefore(div2, div.nextSibling);
-}
-
-
-
-// setTimeout(function() {
-//   for (var i=0; i<=2; i++) {
-//     addElem(mas[i].href,mas[i].text,mas[i].imgSrc)
-//   }
-// }, 10);
-
-
-// var x = 250;
-var x=0;
-var Count=0;
-addElem(NewsSliderArray[Count].href,NewsSliderArray[Count].text,NewsSliderArray[Count].imgSrc)
-var NewsSliderCount=250*(NewsSliderArray.length-1)
-
-// console.log('NewsSliderCount= ' + NewsSliderCount)
-
-let SlideLeft = function () {
-  // if (x<NewsSliderCount)  {x+=250}  
-  x+=250
-  document.querySelector('.new-slider__wrapper').style.transform = 'translateX(-' + x + 'px)'
-  // console.log('x= ' + x)
-  Count+=1;
-}
-// let SlideRight = function () {
-
-//  if (x<=NewsSliderCount)  {x-=250}  
-//   if (x<1) {x=0}
-//    // console.log('NewsSliderCount= ' + NewsSliderCount)
-//  // console.log('RIGHT x= ' + x)
-//  document.querySelector('.new-slider__wrapper').style.transform = 'translateX(-' + x + 'px)';
-//  Count-=1;
-
-// }
-
-var timerIdd = setInterval(function() {
-
- if (Count<NewsSliderArray.length) {
-  SlideLeft();
-  // console.log('Count ' + Count)
-// if (Count==3) {
-//     while (Count>0) do {
-//       // SlideRight()
-//       alert(Count)
-//       count-=1
-//     }
-// } else {}
-
-
-}
-
-if (Count==NewsSliderArray.length) {Count=0} else {}
-
-  // console.log('Count ' + Count)
-addElem(NewsSliderArray[Count].href,NewsSliderArray[Count].text,NewsSliderArray[Count].imgSrc)
-
-
-setTimeout(function() {
-addElem(NewsSliderArray[Count+1].href,NewsSliderArray[Count+1].text,NewsSliderArray[Count+1].imgSrc)
-}, 500);
-
-},5500);
-
-
-// var timerId = setInterval(function() {
-//   SlideLeft();
-// }, 500);
-</script>
