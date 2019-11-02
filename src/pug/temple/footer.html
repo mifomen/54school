@@ -60,8 +60,8 @@ once: true,
 </script>
 
 
- <div class="cookie" data-aos="fade-bottom" data-aos-easing="linear" data-aos-duration="750">
-    <!-- <svg></svg> -->
+ <div class="cookie">
+
     <button class="cookie__close-btn" type="button" onclick="HideCoockieMessage('.cookie')"> close / закрыть</button>
 
 <h1 class="cookie__title">Cookie-файлы</h1>
@@ -84,6 +84,7 @@ once: true,
    var HideCoockieMessage  = function (item) { 
     form = document.querySelector(item);
     form.style.opacity="0";
+    form.style.display="none";
     localStorage["SeeCoockieMessage"] = "YES"
     setTimeout(function() {form.display="none";}, 1000);
    };
@@ -92,7 +93,7 @@ once: true,
 
    document.addEventListener('DOMContentLoaded', function () {
     if (localStorage["SeeCoockieMessage"] === "YES") {
-     document.querySelector('.cookie').display="none";
+     document.querySelectorAll('.cookie').display="none";
     }
   })
 
